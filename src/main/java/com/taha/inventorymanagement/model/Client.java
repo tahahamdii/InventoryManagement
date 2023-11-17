@@ -1,21 +1,20 @@
-package model;
+package com.taha.inventorymanagement.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-
 @Entity
-@Table(name = "")
-public class Fournisseur extends AbstractEntity{
+@Table(name = "client")
+public class Client extends AbstractEntity{
 
     @Column(name = "nom")
     private String nom;
@@ -32,6 +31,7 @@ public class Fournisseur extends AbstractEntity{
     @Column(name = "numTel")
     private String numTel ;
 
-    @OneToMany(mappedBy = "fournisseur")
-    private List<CommandeFournisseur> commandeFournisseurs ;
+    @OneToMany(mappedBy = "client")
+    private List<CommandeClient> commandeClients ;
+
 }

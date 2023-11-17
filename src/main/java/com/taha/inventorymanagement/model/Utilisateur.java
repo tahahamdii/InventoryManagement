@@ -1,12 +1,12 @@
-package model;
+package com.taha.inventorymanagement.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 @Data
 @NoArgsConstructor
@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
-@Table(name = "")
+@Table(name = "Utilisateur")
 public class Utilisateur extends AbstractEntity{
 
     private String nom;

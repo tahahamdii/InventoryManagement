@@ -1,14 +1,14 @@
-package model;
+package com.taha.inventorymanagement.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 import java.util.List;
 
 @Data
@@ -17,7 +17,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 
 @Entity
-@Table(name = "")
+@Table(name = "LigneCommandeFournisseur")
 public class LigneCommandeFournisseur extends AbstractEntity{
     @ManyToOne
     @JoinColumn(name = "idarticle")
@@ -25,6 +25,6 @@ public class LigneCommandeFournisseur extends AbstractEntity{
 
     @ManyToOne
     @JoinColumn(name = "idcommandefournisseur")
-    private List<CommandeFournisseur> commandeFournisseurs;
+    private CommandeFournisseur commandeFournisseur;
 
 }

@@ -1,4 +1,4 @@
-package model;
+package com.taha.inventorymanagement.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.extern.apachecommons.CommonsLog;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 
 @Data
@@ -14,8 +14,9 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
 
+
+@Table(name = "article")
 @Entity
-@Table(name = "")
 public class Article extends AbstractEntity{
 
     @Column(name = "codeartcile")
